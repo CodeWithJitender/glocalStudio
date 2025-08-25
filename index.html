@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studio Ma:Ya</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Motion One (Framer Motion for plain JS) -->
+    <script src="https://unpkg.com/@motionone/dom"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Slick Slider -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+  </head>
+  <body class="">
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-black/50 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <div class="text-white">
+            <img src="images/logo.webp" class="max-w-[100px]" alt="" />
+          </div>
+
+          <!-- Desktop Menu -->
+          <nav class="hidden md:flex space-x-8 text-white font-medium">
+            <a href="#" class="hover:text-gray-300">Home</a>
+            <a href="#" class="hover:text-gray-300">About</a>
+            <a href="#" class="hover:text-gray-300">Projects</a>
+            <a href="#" class="hover:text-gray-300">Careers</a>
+            <a href="#" class="hover:text-gray-300">Publications</a>
+            <a href="#" class="hover:text-gray-300">Contact</a>
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="menu-btn"
+            class="md:hidden text-white text-2xl focus:outline-none"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-black/80 backdrop-blur-md"
+      >
+        <nav class="flex flex-col space-y-4 p-6 text-white font-medium">
+          <a href="#" class="hover:text-gray-300">Home</a>
+          <a href="#" class="hover:text-gray-300">About</a>
+          <a href="#" class="hover:text-gray-300">Projects</a>
+          <a href="#" class="hover:text-gray-300">Careers</a>
+          <a href="#" class="hover:text-gray-300">Publications</a>
+          <a href="#" class="hover:text-gray-300">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Slider -->
+    <section class="hero-slider">
+      <div class="slider relative">
+        <div>
+          <img src="images/1.jpg" alt="Project 1" class="" />
+        </div>
+        <div>
+          <img src="images/2.jpg" alt="Project 2" class="" />
+        </div>
+        <div>
+          <img src="images/3.jpg" alt="Project 3" class="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us  -->
+    <section class="max-w-7xl mx-auto px-6 py-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">About Us</h2>
+
+      <div class="flex flex-col md:flex-row items-center md:items-start gap-12">
+        <!-- Left Image & Name -->
+        <div class="flex flex-col items-center md:w-1/3">
+          <img
+            src="images/about.webp"
+            alt="Founder"
+            class="rounded-lg shadow-lg w-72 md:w-full object-cover"
+          />
+          <div class="mt-4 text-center">
+            <h3 class="text-lg font-semibold">Ar Mayank Yadav</h3>
+            <p class="text-gray-500 text-sm">Founder & Design Head</p>
+          </div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="md:w-2/3 text-gray-700 space-y-6">
+          <p>
+            At <span class="font-semibold">Studio Ma:Ya</span>, we believe that
+            every space has a story waiting to be told. Based in the heart of
+            New Delhi, we are a multidisciplinary design studio specializing in
+            architecture and interior design, dedicated to shaping environments
+            that are innovative, sustainable, and deeply responsive to their
+            context.
+          </p>
+
+          <p>
+            Our approach blends functionality with elegance, tradition with
+            modernity, and vision with detail. From concept to completion, we
+            immerse ourselves in each project—be it residential, commercial,
+            institutional, or hospitality—delivering spaces that are not only
+            visually compelling but also deeply human-centered.
+          </p>
+
+          <p>
+            At <span class="font-semibold">Ma:Ya</span>, our approach is
+            collaborative, integrated, and focused on resource utilization and
+            achieving global reach with a local touch. With our designers,
+            consultants, engineers, and the entire
+            <span class="font-bold underline">TEAM</span> at our studio, we
+            provide distinctive worldwide services as follows.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services we provide  -->
+    <section class="max-w-7xl mx-auto px-6 py-16">
+      <!-- Title -->
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        Services We Provide
+      </h2>
+
+      <!-- Services Grid -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center"
+      >
+        <!-- Service Card -->
+        <div
+          class="bg-white text-gray-800 shadow-md rounded-xl py-6 px-8 font-medium hover:bg-black hover:text-white transition duration-300"
+        >
+          Architecture
+        </div>
+
+        <!-- Active Service Card -->
+        <div
+          class="bg-black text-white shadow-md rounded-xl py-6 px-8 font-medium hover:bg-black hover:text-white"
+        >
+          Interior Designing
+        </div>
+
+        <!-- Service Card -->
+        <div
+          class="bg-white text-gray-800 shadow-md rounded-xl py-6 px-8 font-medium hover:bg-black hover:text-white transition duration-300"
+        >
+          Urban Planning
+        </div>
+
+        <!-- Service Card -->
+        <div
+          class="bg-white text-gray-800 shadow-md rounded-xl py-6 px-8 font-medium hover:bg-black hover:text-white transition duration-300"
+        >
+          Landscaping
+        </div>
+
+        <!-- Service Card -->
+        <div
+          class="bg-white text-gray-800 shadow-md rounded-xl py-6 px-8 font-medium hover:bg-black hover:text-white transition duration-300"
+        >
+          Graphic Designing
+        </div>
+
+        <!-- Service Card -->
+        <div
+          class="bg-white text-gray-800 shadow-md rounded-xl py-6 px-8 font-medium hover:bg-black hover:text-white transition duration-300"
+        >
+          Product Designing
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects  -->
+    <!-- Projects -->
+    <section class="bg-gray-100 py-12">
+      <div class="container mx-auto px-4">
+        <!-- Heading -->
+        <h2 class="text-3xl font-bold text-center mb-8">Projects</h2>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap justify-center gap-4 mb-10">
+          <button
+            class="filter-btn bg-black text-white px-6 py-2 rounded-lg"
+            data-filter="all"
+          >
+            All
+          </button>
+          <button
+            class="filter-btn border px-6 py-2 rounded-lg"
+            data-filter="residential"
+          >
+            Residential
+          </button>
+          <button
+            class="filter-btn border px-6 py-2 rounded-lg"
+            data-filter="commercial"
+          >
+            Commercial
+          </button>
+          <button
+            class="filter-btn border px-6 py-2 rounded-lg"
+            data-filter="hospitality"
+          >
+            Hospitality
+          </button>
+          <button
+            class="filter-btn border px-6 py-2 rounded-lg"
+            data-filter="institutional"
+          >
+            Institutional
+          </button>
+          <button
+            class="filter-btn border px-6 py-2 rounded-lg"
+            data-filter="competition"
+          >
+            Competition
+          </button>
+        </div>
+
+        <!-- Project Grid -->
+        <div
+          class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          id="projectsGrid"
+        ></div>
+      </div>
+    </section>
+
+    <script>
+      // Projects Data
+      const projects = [
+        {
+          title: "Neel David Salon",
+          desc: "Refined Elegance Meets Urban Chic",
+          img: "images/res-1.jpg",
+          category: "residential",
+        },
+        {
+          title: "Corporate Office",
+          desc: "Modern & Sustainable Design",
+          img: "images/res-2.jpg",
+          category: "residential",
+        },
+        {
+          title: "Luxury Hotel",
+          desc: "Opulence & Comfort Combined",
+          img: "images/res-3.jpg",
+          category: "residential",
+        },
+        {
+          title: "Luxury Hotel",
+          desc: "Opulence & Comfort Combined",
+          img: "images/res-4.jpg",
+          category: "residential",
+        },
+        {
+          title: "Commercial Tower",
+          desc: "Urban Landmark Design",
+          img: "images/com-1.jpg",
+          category: "commercial",
+        },
+        {
+          title: "Retail Complex",
+          desc: "Modern Shopping Experience",
+          img: "images/com-2.jpg",
+          category: "commercial",
+        },
+        {
+          title: "Luxury Hotel",
+          desc: "Opulence & Comfort Combined",
+          img: "images/hos-1.jpg",
+          category: "hospitality",
+        },
+        {
+          title: "Resort & Spa",
+          desc: "Luxury Meets Nature",
+          img: "images/hos-2.jpg",
+          category: "hospitality",
+        },
+        {
+          title: "Competition Entry",
+          desc: "Innovative Architectural Solution",
+          img: "images/compe-1.jpg",
+          category: "competition",
+        },
+        {
+          title: "University Campus",
+          desc: "Modern Educational Hub",
+          img: "images/ins.jpg",
+          category: "institutional",
+        },
+      ];
+
+      const projectsGrid = document.getElementById("projectsGrid");
+      const filterBtns = document.querySelectorAll(".filter-btn");
+
+      // Render Projects
+      function renderProjects(filter) {
+        projectsGrid.innerHTML = "";
+        const filtered =
+          filter === "all"
+            ? projects
+            : projects.filter((p) => p.category === filter);
+
+        filtered.forEach((p) => {
+          const projectHTML = `
+        <div class="project-item ${p.category} relative group overflow-hidden rounded-lg shadow-md">
+          <img src="${p.img}" alt="${p.title}" 
+            class="w-full " />
+          <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <h3 class="text-white text-lg font-semibold">${p.title}</h3>
+            <p class="text-gray-200 text-sm">${p.desc}</p>
+          </div>
+        </div>
+      `;
+          projectsGrid.innerHTML += projectHTML;
+        });
+      }
+
+      // Initial Render
+      renderProjects("all");
+
+      // Filter Button Clicks
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterBtns.forEach((b) =>
+            b.classList.remove("bg-black", "text-white")
+          );
+          btn.classList.add("bg-black", "text-white");
+          renderProjects(btn.dataset.filter);
+        });
+      });
+    </script>
+
+    <!-- Publications  -->
+
+    <section class="bg-gray-100 py-16">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-10">Publications</h2>
+        <div id="publications" class="space-y-10"></div>
+      </div>
+    </section>
+
+    <script>
+      // Publications Data
+      const publications = [
+        {
+          title: "#AIExclusive",
+          description:
+            "Kalkaji residence is a combination of two things, first, the earthiness which correlates with the women of the house, and the other is steadiness which comes from the man of the house...",
+          img: "images/publication.jpg",
+          link: "#",
+        },
+        {
+          title: "Delhi’s Unconventional Law Office",
+          description:
+            "While many law offices across India adopt a traditional décor, this law office breaks away with modern, simple, and elegant design...",
+          img: "images/publication.jpg",
+          link: "#",
+        },
+        {
+          title: "A Conventional Delhi Home",
+          description:
+            "This residence is high on style and filled with creative design ideas. Designed to accommodate each generation while keeping grandeur intact...",
+          img: "images/publication.jpg",
+          link: "#",
+        },
+        {
+          title: "Straight Talk with Mayank Yadav",
+          description:
+            "Studio MaYa believes in creating architecture that’s multi-layered, versatile, and sensitive to contextual conditions...",
+          img: "images/publication.jpg",
+          link: "#",
+        },
+      ];
+
+      const container = document.getElementById("publications");
+
+      publications.forEach((pub, index) => {
+        const isReversed = index % 2 !== 0; // alternate left/right layout
+        const pubHTML = `
+      <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row ${
+        isReversed ? "md:flex-row-reverse" : ""
+      } group hover:shadow-xl transition-shadow duration-300">
+        <div class="md:w-1/3 relative overflow-hidden">
+          <img src="${pub.img}" alt="${pub.title}"
+            class="w-full h-64 md:h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
+        </div>
+        <div class="md:w-2/3 p-6 flex flex-col justify-center">
+          <h3 class="text-xl font-semibold mb-3 group-hover:text-black transition-colors">${
+            pub.title
+          }</h3>
+          <p class="text-gray-600 mb-4">${pub.description}</p>
+          <div class="flex ">
+            <a href="${pub.link}"
+            class="inline-flex items-center text-black font-medium border px-4 py-2 rounded-lg group-hover:bg-black group-hover:text-white transition-all">
+            Read More →
+          </a>
+            </div>
+        </div>
+      </div>
+    `;
+        container.innerHTML += pubHTML;
+      });
+    </script>
+
+    <!-- Join Our Team -->
+    <section class="bg-gray-100 py-12">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Join our team</h2>
+
+        <div
+          class="grid md:grid-cols-2 gap-8 bg-white rounded-lg shadow-lg overflow-hidden"
+        >
+          <!-- Left Image -->
+          <div>
+            <img
+              src="images/contact.jpg"
+              alt="Join our team"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <!-- Right Form -->
+          <div class="p-8 flex flex-col justify-center">
+            <form
+              action="https://formsubmit.co/YOUR_EMAIL_HERE"
+              method="POST"
+              class="space-y-4"
+            >
+              <!-- Disable Captcha -->
+              <input type="hidden" name="_captcha" value="false" />
+              <!-- Redirect after submission -->
+              <input
+                type="hidden"
+                name="_next"
+                value="https://yourwebsite.com/thank-you.html"
+              />
+
+              <div>
+                <label class="block text-sm font-medium mb-1">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium mb-1">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium mb-1">Message</label>
+                <textarea
+                  name="message"
+                  rows="4"
+                  required
+                  class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition"
+              >
+                Send Message
+              </button>
+            </form>
+
+            <!-- Description -->
+            <p class="mt-6 text-gray-600 text-sm">
+              At Studio Ma:Ya, we are constantly looking to enrich our studio
+              with individuals from diverse backgrounds, such as Architecture,
+              Interior Design, Planning, Graphic Design, and Product Design. Any
+              interest towards design, or being highly motivated and organized,
+              is welcome.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section class="bg-gray-100 py-12">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
+
+        <div
+          class="grid md:grid-cols-2 gap-8 bg-white rounded-lg shadow-lg overflow-hidden"
+        >
+          <!-- Map -->
+          <div class="w-full h-80 md:h-auto">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.8457640024803!2d77.35152699999999!3d28.6044035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5aaa074182b%3A0x28d21d722b53a1c2!2sHead%20Field%20Solutions%20Private%20Limited%20-%20Head%20office!5e0!3m2!1sen!2sin!4v1756122998787!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full h-full"
+            >
+            </iframe>
+          </div>
+
+          <!-- Contact Details -->
+          <div class="p-8 flex flex-col justify-center space-y-4">
+            <div
+              class="flex items-center space-x-3 bg-gray-50 p-4 rounded-lg shadow-sm"
+            >
+              <span class="text-blue-600 text-xl">✉️</span>
+              <a href="mailto:contact@studiomaya.in" class="text-gray-700"
+                >contact@studiomaya.in</a
+              >
+            </div>
+
+            <div
+              class="flex items-center space-x-3 bg-gray-50 p-4 rounded-lg shadow-sm"
+            >
+              <span class="text-green-600 text-xl">📞</span>
+              <a href="tel:+919711731024" class="text-gray-700"
+                >9711731024, 8700218168</a
+              >
+            </div>
+
+            <div
+              class="flex items-center space-x-3 bg-gray-50 p-4 rounded-lg shadow-sm"
+            >
+              <span class="text-pink-600 text-xl">📸</span>
+              <a
+                href="https://instagram.com/studiomaya.in"
+                target="_blank"
+                class="text-gray-700"
+                >@studiomaya.in</a
+              >
+            </div>
+
+            <div
+              class="flex items-center space-x-3 bg-gray-50 p-4 rounded-lg shadow-sm"
+            >
+              <span class="text-blue-700 text-xl">📘</span>
+              <a
+                href="https://facebook.com/studiomaya.in"
+                target="_blank"
+                class="text-gray-700"
+                >/studiomaya.in</a
+              >
+            </div>
+
+            <div
+              class="flex items-center space-x-3 bg-gray-50 p-4 rounded-lg shadow-sm"
+            >
+              <span class="text-blue-500 text-xl">💼</span>
+              <a
+                href="https://linkedin.com/company/studiomaya"
+                target="_blank"
+                class="text-gray-700"
+                >/company/studiomaya</a
+              >
+            </div>
+
+            <div
+              class="flex items-center space-x-3 bg-gray-50 p-4 rounded-lg shadow-sm"
+            >
+              <span class="text-red-600 text-xl">📍</span>
+              <p class="text-gray-700">
+                43-D, Kamla Nagar, Delhi 110007 | A-17, Ground Floor, Sector-53,
+                Noida-201301
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="bg-black text-gray-300 py-10">
+  <div class="container mx-auto px-6 md:px-12">
+    <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+
+      <!-- Logo & tagline -->
+      <div>
+       <img src="images/logo.webp" class="max-w-[200px]" alt="">
+        <p class="mt-2 text-sm">Architecture | Interior | Planning</p>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Our Company</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-white">Home</a></li>
+          <li><a href="#" class="hover:text-white">About</a></li>
+          <li><a href="#" class="hover:text-white">Projects</a></li>
+          <li><a href="#" class="hover:text-white">Careers</a></li>
+          <li><a href="#" class="hover:text-white">Publications</a></li>
+          <li><a href="#" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Links -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Get in Touch</h3>
+        <ul class="space-y-2">
+          <li class="flex items-center justify-center md:justify-start space-x-2">
+            <span class="text-blue-400">🔗</span>
+            <a href="#" class="hover:text-white">LinkedIn</a>
+          </li>
+          <li class="flex items-center justify-center md:justify-start space-x-2">
+            <span class="text-blue-500">📘</span>
+            <a href="#" class="hover:text-white">Facebook</a>
+          </li>
+          <li class="flex items-center justify-center md:justify-start space-x-2">
+            <span class="text-pink-500">📸</span>
+            <a href="#" class="hover:text-white">Instagram</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-500">
+      <p>© 2025 Studio Ma:Ya. All rights reserved.</p>
+      <p class="mt-2">Powered by <span class="font-semibold text-white">Studio Ma:Ya</span></p>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- jQuery for Filtering -->
+    <script>
+      $(document).ready(function () {
+        $(".filter-btn").click(function () {
+          var filter = $(this).data("filter");
+
+          // Button active state
+          $(".filter-btn")
+            .removeClass("bg-black text-white")
+            .addClass("border");
+          $(this).addClass("bg-black text-white").removeClass("border");
+
+          if (filter === "all") {
+            $(".project-item").show("slow");
+          } else {
+            $(".project-item").hide("slow");
+            $("." + filter).show("slow");
+          }
+        });
+      });
+    </script>
+
+    <!-- Js Links  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script></script>
+
+    <script>
+      // Toggle Mobile Menu
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      //   Slider js
+      $(document).ready(function () {
+        $(".slider").slick({
+          dots: true, // navigation dots
+          infinite: true, // infinite loop
+          speed: 500,
+          fade: true, // smooth fade transition
+          cssEase: "linear",
+          //   autoplay: true,
+          autoplaySpeed: 4000, // 4 seconds
+          arrows: false, // remove prev/next arrows
+        });
+      });
+    </script>
+  </body>
+</html>
